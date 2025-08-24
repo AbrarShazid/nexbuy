@@ -7,6 +7,7 @@ export default function NotFound() {
       <div className="text-center">
         <h1 className="text-9xl font-bold text-[#4c83e0] dark:text-white">404</h1>
         <h2 className="text-2xl font-semibold text-gray-800 dark:text-white mt-4">Page Not Found</h2>
+        {/* eslint-disable-next-line react/no-unescaped-entities */}
         <p className="text-gray-600 dark:text-gray-300 mt-2 mb-8">
           Sorry, we couldn't find the page you're looking for.
         </p>

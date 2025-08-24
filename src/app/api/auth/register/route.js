@@ -1,5 +1,5 @@
 import { clientPromise } from "@/lib/mongodb"
-import { hash } from "bcryptjs"
+import bcrypt from "bcryptjs"
 
 export async function POST(req) {
   try {
@@ -18,7 +18,7 @@ export async function POST(req) {
       return new Response(JSON.stringify({ message: "User already exists" }), { status: 422 })
     }
 
-    const hashed = await hash(password, 12)
+    const hashed = await bcrypt.hash(password, 12)
     await users.insertOne({
       name,
       email,
